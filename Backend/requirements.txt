@@ -8,3 +8,4 @@ python-dotenv
 sqlalchemy
 psutil
 pymongo
+tensorflow
