@@ -124,7 +124,12 @@ def load_resources():
         import tensorflow as tf
         if os.path.exists(MODEL_PATH):
             custom = get_custom_objects()
-            model  = tf.keras.models.load_model(MODEL_PATH, custom_objects=custom, compile=False)
+            model = tf.keras.models.load_model(
+    MODEL_PATH,
+    custom_objects=custom,
+    compile=False,
+    safe_mode=False
+)
             model.compile(optimizer="adam", loss="huber", metrics=["mae"])
             print(f"✅ Model loaded  : {MODEL_PATH}")
         else:

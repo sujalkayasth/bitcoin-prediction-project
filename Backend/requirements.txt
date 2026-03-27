@@ -8,4 +8,5 @@ python-dotenv
 sqlalchemy
 psutil
 pymongo
-tensorflow
+tensorflow==2.15.0
+keras==2.15.0
