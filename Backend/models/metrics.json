@@ -1,0 +1,11 @@
+{
+  "mae": 18936.332,
+  "rmse": 21360.4884,
+  "mape": 26.2152,
+  "r2": -3.1231,
+  "trained_at": "2026-03-27T13:24:21.881329",
+  "epochs_run": 11,
+  "train_samples": 569,
+  "seq_len": 60,
+  "data_source": "yfinance"
+}
