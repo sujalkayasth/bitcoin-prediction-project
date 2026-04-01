@@ -1,12 +1,10 @@
 fastapi
 uvicorn
 pandas
-numpy==1.23.5
+numpy==1.24.3
 scikit-learn
 matplotlib
 python-dotenv
 sqlalchemy
 psutil
 pymongo
-tensorflow==2.12.0
-keras==2.12.0
