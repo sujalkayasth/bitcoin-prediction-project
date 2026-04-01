@@ -8,3 +8,6 @@ python-dotenv
 sqlalchemy
 psutil
 pymongo
+tensorflow-cpu
+joblib
+yfinance
