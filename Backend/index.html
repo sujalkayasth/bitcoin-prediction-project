@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bitcoin Prediction Dashboard</title>
+</head>
+
+<body>
+
+<h2>Bitcoin Prediction Dashboard</h2>
+
+<p>Current Price: <span id="price"></span></p>
+<p>Predicted Price: <span id="prediction"></span></p>
+<p>Signal: <span id="signal"></span></p>
+
+<script>
+
+async function loadData(){
+
+const res = await fetch("/predict");
+const data = await res.json();
+
+document.getElementById("price").innerText = data.current_price;
+document.getElementById("prediction").innerText = data.predicted_price;
+document.getElementById("signal").innerText = data.signal;
+
+}
+
+loadData();
+
+</script>
+
+</body>
+</html>

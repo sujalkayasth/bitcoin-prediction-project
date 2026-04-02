@@ -2,7 +2,7 @@
 # main.py — BTC NextGen | FastAPI Backend
 # Endpoints: /predict, /historical, /backtest, /benchmark, /health
 # ============================================================
-
+from fastapi.responses import FileResponse
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
@@ -223,15 +223,11 @@ def _signal(diff: float, threshold: float) -> str:
 # ENDPOINTS
 # ────────────────────────────────────────────────────────────
 
+from fastapi.responses import FileResponse
+
 @app.get("/")
-def root():
-    return {
-        "name":         "BTC NextGen Forecast API",
-        "version":      "2.0.0",
-        "model_ready":  model is not None,
-        "scaler_ready": scaler is not None,
-        "endpoints":    ["/predict", "/historical/{days}", "/backtest", "/benchmark", "/health", "/metrics"]
-    }
+def dashboard():
+    return FileResponse("index.html")
 
 
 @app.get("/health")
