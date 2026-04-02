@@ -272,8 +272,9 @@ def predict(
         raw = _fetch(max(days, SEQ_LEN + 10))
 
         # ── Live price (Binance real-time) ──
-        live_data     = _get_live_price()
-        current_price = live_data["price"] if live_data else float(raw[-1])
+        live_data = _get_live_price() or {}
+
+        current_price = live_data.get("price", float(raw[-1]))
 
         # ── Model prediction (uses historical sequence) ──
         pred_price = _predict_next(raw)
