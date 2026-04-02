@@ -20,7 +20,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-BACKEND      = "http://127.0.0.1:8000"
+BACKEND      = BACKEND = "https://bitcoin-prediction-project--sujalkayasth111.replit.app"
 TICKETS_FILE = "tickets.json"
 REFRESH_SEC  = 30   # har 30 second mein dashboard update
 
